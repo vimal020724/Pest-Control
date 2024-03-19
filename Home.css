@@ -9,6 +9,47 @@ body {
   display: none;
 }
 
+.h-btn{
+  /* align-items: center; */
+  text-align: center;
+}
+
+
+
+/* CSS */
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 25px;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+
 #fit {
   max-width: 100%;
   width: 100%;
@@ -72,9 +113,22 @@ img {
 /* Centered text */
 .centered {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 10%;
+  right: 10%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.centered h1{
+  font-size: 50px;
+  text-align: center;
+}
+
+.centered p{
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* The dots/bullets/indicators */
@@ -135,6 +189,50 @@ img {
   }
 }
 
+
+@media (max-width: 780px){
+  .centered{
+    top: 20%;
+  }
+  .centered h1{
+    font-size: 30px;
+  }
+
+  .centered p{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px){
+  .centered {
+    top: 18%;
+  }
+
+  .centered h1{
+    font-size: 25px;
+  }
+  .centered p{
+    font-size: 10px;
+  }
+
+  .centered .h-btn .button-33{
+    margin-right: 10px;
+    padding: 5px 15px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 390px){
+  .centered h1{
+    font-size: 20px;
+  }
+  /* .centered p{
+    font-size: 8px;
+  } */
+}
+
+
+
 /* Request form css */
 
 .request {
@@ -183,18 +281,16 @@ input:focus {
   box-shadow: 13px 13px 100px #969696, -13px -13px 100px #ffffff;
 }
 
-@media (max-width:780px){
-  .request form{
+@media (max-width: 780px) {
+  .request form {
     display: flex;
     flex-direction: row;
     gap: 15px;
   }
-  
-
 }
 
-@media (max-width:520px){
-  .request form{
+@media (max-width: 520px) {
+  .request form {
     display: flex;
     flex-direction: column;
   }
